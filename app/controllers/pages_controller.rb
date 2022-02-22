@@ -12,4 +12,7 @@ class PagesController < ApplicationController
 
   def checkin
   end
+
+  def confirmation
+  end
 end

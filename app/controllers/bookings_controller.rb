@@ -4,7 +4,7 @@ class BookingsController < ApplicationController
     def index
       @bookings = Booking.all
     end
-  
+
     def create
       @booking = Booking.new(booking_params)
       raise
@@ -15,26 +15,26 @@ class BookingsController < ApplicationController
         render :new
       end
     end
-  
+
     def new
       @booking = Booking.new
     end
-  
+
     def destroy
       @booking.destroy
       redirect_to experience_bookings_path
     end
-  
+
     def show
     end
-  
-  
+
+
     private
-  
+
     def set_booking
       @booking = Booking.find(params[:id])
     end
-  
+
     def booking_params
       params.require(:booking).permit(:user_id, :date, :place_id)
     end
