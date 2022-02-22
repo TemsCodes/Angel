@@ -215,10 +215,7 @@ GEM
 
 PLATFORMS
   arm64-darwin-20
-<<<<<<< HEAD
-=======
   x86_64-darwin-19
->>>>>>> 638ecbf1df75fb4ba4a722641da37dd51cad614c
   x86_64-darwin-20
   x86_64-linux
 
