@@ -51,4 +51,5 @@ class PlaceController < ApplicationController
   def place_params
     params.require(:place).permit(:name, :address, :description, :website, :map_url, :phone_number)
   end
+
 end
