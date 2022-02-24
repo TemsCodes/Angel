@@ -6,5 +6,5 @@ Rails.application.routes.draw do
     resources :bookings, only: [:new, :create, :edit, :update]
   end
   resources :bookings, only: [:index, :show, :destroy]
-  get "profile", action: :show, controller: "pages"
+  get "profile", to: 'pages#profile'
 end
