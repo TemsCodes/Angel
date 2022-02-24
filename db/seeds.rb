@@ -7,33 +7,26 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 require 'faker'
+require_relative '../app/models/user'
+require_relative '../app/models/place'
 
- #User.create(address_line_1: Faker::Address.street_address) do |address|
-  #address.city = Faker::Address.city
-  #address.postal_code = Faker::Address.zip
-  #address.country = Faker::Address.country
-# end
+20.times do
+ user = User.new
+ user.first_name = Faker::Name.name
+ user.last_name = Faker::Name.last_name
+ user.email = Faker::Internet.email
+ user.password = Faker::Internet.password
+ # user.phone_number = Faker::PhoneNumber.cell_phone
+ user.save!
+end
 
 
-#(1..20).each do |id|
- #User.create(
-
-
-  #id: id,
-  #name: Faker::Name.name,
-  #last_name: Faker::Name.last_name,
-  #email: Faker::Internet.email,
-  #phone_number: Faker::PhoneNumber.cell_phone
- #)
-#end
-
-#(1..20).each do |id|
- #Place.create!(
-  #id: id,
-  #name: Faker::Restaurant.name,
-  #description: Faker::Restaurant.description,
-  #email: Faker::Internet.email,
-  #phone_number: Faker::PhoneNumber.phone_number,
-  #website: Faker::Internet.url
- #)
-#end
+20.times do
+ place = Place.new
+ place.name = Faker::Restaurant.name
+ place.address = Faker::Address.full_address
+ place.description = Faker::Restaurant.description
+ place.website = Faker::Internet.url
+ place.phone_number = Faker::PhoneNumber.phone_number
+ place.save!
+end
