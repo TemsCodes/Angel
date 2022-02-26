@@ -20,6 +20,7 @@ end
 
 tate_picture = URI.open('https://res.cloudinary.com/dfljjticx/image/upload/v1644665936/tate_britain_exterior_1_yyyfwz.jpg')
 
+
 puts 'Creating places'
 tate = Place.create!(
   name: "Tate Modern London",
@@ -31,13 +32,18 @@ tate = Place.create!(
 
 tate.photo.attach(io: tate_picture, filename: 'tate.png', content_type: 'image/png')
 
-
+=======
 # 20.times do
 #  place = Place.new
 #  place.name = Faker::Restaurant.name
-#  place.address = Faker::Address.full_address
+#  place.address = Faker::Address.full_address_as_hash(:longitude,
+#                                     :latitude,
+#                                     :country_name_to_code,
+#                                     country_name_to_code: {name: 'united_kingdom'})
 #  place.description = Faker::Restaurant.description
 #  place.website = Faker::Internet.url
 #  place.phone_number = Faker::PhoneNumber.phone_number
+#  place.image_url = Faker::LoremFlickr.unique.image(size: "40X30", search_terms: ['london', 'restaurant'])
 #  place.save!
 # end
+
