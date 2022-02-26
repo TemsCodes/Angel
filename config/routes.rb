@@ -9,6 +9,6 @@ Rails.application.routes.draw do
     resources :reviews, only: [:new, :create]
   end
   get "profile", to: 'pages#profile'
-  get "confirmation", to: 'pages#confirmation'
-
+  post "booking", to: 'booking#create'
+  get "checkin", to: 'pages#checkin'
 end
