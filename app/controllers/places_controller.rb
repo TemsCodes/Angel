@@ -4,7 +4,7 @@ class PlacesController < ApplicationController
   def index
     if params[:query].present?
       @query = params[:query]
-      @places = Place.where("name LIKE ?","%#{params[:query]}%")
+      @places = Place.where("name LIKE ?", "%#{params[:query]}%")
       # Preventing SQL Injection and Database error for
       # unknown characters
     else
@@ -51,5 +51,4 @@ class PlacesController < ApplicationController
   def place_params
     params.require(:place).permit(:name, :address, :description, :website, :map_url, :phone_number)
   end
-
 end
