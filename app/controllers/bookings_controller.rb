@@ -11,7 +11,7 @@ class BookingsController < ApplicationController
     if @booking.save
       redirect_to profile_path
     else
-      render :new
+      render :show
     end
   end
 
@@ -34,6 +34,6 @@ class BookingsController < ApplicationController
   end
 
   def booking_params
-    params.require(:booking).permit(:user_id, :date, :place_id)
+    params.require(:booking).permit(:user_id, :date, :place_id, :identification, :details, :question)
   end
 end
