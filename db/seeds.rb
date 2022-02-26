@@ -6,10 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
-# remove all the instances
 puts "Cleaning database..."
 Place.destroy_all
-
+# remove all the instances
 
 20.times do
  user = User.new
@@ -23,6 +22,7 @@ end
 
 tate_picture = URI.open('https://res.cloudinary.com/dfljjticx/image/upload/v1644665936/tate_britain_exterior_1_yyyfwz.jpg')
 
+
 puts 'Creating places'
 tate = Place.create!(
   name: "Tate Modern London",
@@ -34,19 +34,19 @@ tate = Place.create!(
 
 tate.photo.attach(io: tate_picture, filename: 'tate.png', content_type: 'image/png')
 
+
 pizzaeast_picture = URI.open('https://res.cloudinary.com/dfljjticx/image/upload/v1644669676/pizzaeast_j438iw.jpg')
 
-puts 'Creating experiences'
-pizza_east = Experience.create!(
-  name: "Pizza East",
-  description: "Best pizza restaurant in town",
+puts 'Creating places'
+pizza_east = Place.create!(
+  name: "Pizza East Shoreditch",
+  description: "Best Pizza date in London!",
   address: "56A Shoreditch High St, London E1 6JJ",
-  website: "https://www.pizzaeast.com/k",
+  website: "https://www.pizzaeast.com/",
   phone_number: Faker::PhoneNumber.phone_number
 )
 
 pizza_east.photo.attach(io: pizzaeast_picture, filename: 'pizzaeast.png', content_type: 'image/png')
-
 # 20.times do
 #  place = Place.new
 #  place.name = Faker::Restaurant.name
