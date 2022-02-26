@@ -23,6 +23,7 @@ gem 'redis', '~> 4.0'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'bootstrap', '~> 4.2.1'
 gem 'jquery-rails'
+gem 'popper_js', '~> 1.16'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
