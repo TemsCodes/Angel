@@ -1,5 +1,5 @@
-class PlaceController < ApplicationController
-  before_action :set_place, only: %i[show edit update destroy]
+class PlacesController < ApplicationController
+  before_action :set_place, only: [:show, :edit, :update, :destroy]
 
   def index
     if params[:query].present?
