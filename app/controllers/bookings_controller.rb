@@ -41,4 +41,3 @@ class BookingsController < ApplicationController
   end
 
 
-  #add comment

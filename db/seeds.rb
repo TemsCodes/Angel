@@ -5,10 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
 require 'faker'
-require_relative '../app/models/user'
-require_relative '../app/models/place'
+# remove all the instances
 
 20.times do
  user = User.new
@@ -20,13 +18,26 @@ require_relative '../app/models/place'
  user.save!
 end
 
+tate_picture = URI.open('https://res.cloudinary.com/dfljjticx/image/upload/v1644665936/tate_britain_exterior_1_yyyfwz.jpg')
 
-20.times do
- place = Place.new
- place.name = Faker::Restaurant.name
- place.address = Faker::Address.full_address
- place.description = Faker::Restaurant.description
- place.website = Faker::Internet.url
- place.phone_number = Faker::PhoneNumber.phone_number
- place.save!
-end
+puts 'Creating places'
+tate = Place.create!(
+  name: "Tate Modern London",
+  description: "Access the latest exhibition",
+  address: "Bankside, London SE1 9TG",
+  website: "https://www.tate.org.uk",
+  phone_number: Faker::PhoneNumber.phone_number
+)
+
+tate.photo.attach(io: tate_picture, filename: 'tate.png', content_type: 'image/png')
+
+
+# 20.times do
+#  place = Place.new
+#  place.name = Faker::Restaurant.name
+#  place.address = Faker::Address.full_address
+#  place.description = Faker::Restaurant.description
+#  place.website = Faker::Internet.url
+#  place.phone_number = Faker::PhoneNumber.phone_number
+#  place.save!
+# end

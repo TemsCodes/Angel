@@ -26,5 +26,5 @@ import "bootstrap";
 import { review } from '../components/review';
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
-  review();
+review();
 });
