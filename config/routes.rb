@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   end
   get "profile", to: 'pages#profile'
   get "confirmation", to: 'pages#confirmation'
+  get "checkin", to: 'pages#checkin'
 
 end

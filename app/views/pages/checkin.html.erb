@@ -4,21 +4,18 @@
 
 <div class="container">
 <a class="btn btn-ghost" href="#">Check in on me</a>
-
-<%= link_to "Check in on me", "#", class: "btn btn-ghost" %>
+<%# <%= link_to "Check in on me", place_path(@path), class: "btn btn-ghost" %>
  </div>
 <div class="container">
 <a class="btn btn-ghost" href="#">Call me</a>
-<%= link_to "Call me", "#", class: "btn btn-ghost" %>
+<%# <%= link_to "Call me", place_path(@path), class: "btn btn-ghost" %>
 </div>
 <div class="container">
 <a class="btn btn-ghost" href="#">Date is finished</a>
-<%= link_to "Date is finished", "#", class: "btn btn-ghost" %>
-=======
- </div>
-<div class="container">
-<a class="btn btn-ghost" href="#">Call me</a>
-</div>
-<div class="container">
-<a class="btn btn-ghost" href="#">Date is finished</a>
+<%# <%= link_to "Date is finished", place_path(@path), class: "btn btn-ghost" %>
+<div class="flash flash-success alert alert-dismissible fade show" role="alert">
+  <span><strong>Great!</strong> 🎉 a member of staff will be with your shortly.</span>
+  <a data-bs-dismiss="alert" aria-label="Close">
+    <i class="fas fa-times"></i>
+  </a>
 </div>
