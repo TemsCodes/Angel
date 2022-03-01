@@ -12,16 +12,19 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item active">
-          <%= link_to "Emergency", "#", class: "nav-link" %>
+          <%= link_to "/places", class: "navbar-icons" do %>
+          <%= image_tag "https://img.icons8.com/ios-filled/344/phone.png" %>
+          <% end %>
         </li>
         <li class="nav-item">
-          <%= link_to "Call", "#", class: "nav-link" %>
+          <%= link_to "/places", class: "navbar-icons" do %>
+          <%= image_tag "https://img.icons8.com/external-icongeek26-linear-colour-icongeek26/344/external-emergency-alert-icongeek26-linear-colour-icongeek26.png" %>
+          <% end %>
         </li>
         <li class="nav-item dropdown">
           <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "Action", "#", class: "dropdown-item" %>
-            <%= link_to "Another action", "#", class: "dropdown-item" %>
+            <%= link_to "Profile", "/profile", class: "dropdown-item" %>
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>
