@@ -3,9 +3,39 @@
 <div class="homepage-text">
   <%# <h1>PICK A DATE</h1> %>
   <h1>Welcome Manu!</h1>
-  <p>book your Angel today</p>
+  <p>Book your Angel today</p>
 </div>
 
 <div class="front-page">
-  <%# <%= video_tag "#insertvideo", class: "home_video" %> %>
+  <%# <%= video_tag "#insertvideo", class: "home_video" %>
 </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+      <h1>All dating places</h1>
+      <div class="search-bar-index">
+      <form action="/places" accept-charset="UTF-8" method="get">
+
+      <input type="text" name="query" id="form-placeholder" class="form control form-search" placeholder="Find an place..."><input type="submit" name="commit" value="Search" class="btn-search btn-search-index btn-place-new" data-disable-with="Search">
+</form>
+</div>
+</div>
+</div>
+
+<div class="container">
+      <ul class="list-group">
+        <% @places.each do |place| %>
+  <div class="card-trip-infos">
+      <div>
+      <% if place.photo.attached? %>
+      <%= cl_image_tag place.photo.key, height: 300, width: 400, crop: :fill %>
+      <% end %>
+        <h2><%= link_to place.name, place_path(place) %></h2>
+        <p><%= place.description %></p>
+      </div>
+      <%# <h2 class="card-trip-pricing">Top ranking</h2> %>
+  </div>
+  <% end %>
+</ul> </div>
+</div></div>

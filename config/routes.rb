@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   get "profile", to: 'pages#profile'
   post "booking", to: 'booking#create'
   get "checkin", to: 'pages#checkin'
+
 end
