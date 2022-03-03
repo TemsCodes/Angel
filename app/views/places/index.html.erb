@@ -29,7 +29,8 @@
   <div class="card-trip-infos">
       <div>
       <% if place.photo.attached? %>
-      <%= cl_image_tag place.photo.key, height: 300, width: 400, crop: :fill %>
+      <%#= cl_image_tag place.photo.key, height: 300, width: 400, crop: :fill %>
+      <img src="https://res.cloudinary.com/dfljjticx/image/upload/v1644669676/pizzaeast_j438iw.jpg" style="height: 300px; width: 400px;">
       <% end %>
         <h2><%= link_to place.name, place_path(place) %></h2>
         <p><%= place.description %></p>

@@ -1,3 +1,21 @@
-<% @bookings.each do |booking|%>
-<%= booking %>
-<% end %>
+<div class="bookings">
+   <h3 class="sub-heading">YOUR BOOKINGS</h3>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <% @bookings.each do |booking|%>
+          <div class="card-trip">
+              <%# <img src="https://www.tate.org.uk/sites/default/files/styles/width-720/public/images/people-on-the-millennium-br_0.jpg"> %>
+              <div class="card-trip-infos">
+                <div>
+                <h4>You booked an angel for your date at <%= booking.place.name %></h4>
+                  <h5>Booked for <%= booking.date %></h5>
+                </div>
+                  <%= link_to "Book again?", "/experiences", class: "button-profile" %>
+            </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+   </div>

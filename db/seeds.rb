@@ -20,6 +20,7 @@ Place.destroy_all
  user.save!
 end
 
+
 tate_picture = URI.open('https://res.cloudinary.com/dfljjticx/image/upload/v1644665936/tate_britain_exterior_1_yyyfwz.jpg')
 
 
@@ -47,6 +48,11 @@ pizza_east = Place.create!(
 )
 
 pizza_east.photo.attach(io: pizzaeast_picture, filename: 'pizzaeast.png', content_type: 'image/png')
+
+
+
+
+
 # 20.times do
 #  place = Place.new
 #  place.name = Faker::Restaurant.name
