@@ -21,9 +21,10 @@ gem 'jbuilder', '~> 2.7'
 gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-gem 'bootstrap', '~> 4.2.1'
+gem 'bootstrap', '~> 5.1.3'
 gem 'jquery-rails'
-gem 'popper_js', '~> 1.16'
+gem 'popper_js', '>= 2.9.3'
+
 
 
 gem 'dotenv-rails', groups: [:development, :test]
