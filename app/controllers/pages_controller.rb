@@ -10,6 +10,7 @@ class PagesController < ApplicationController
   end
 
   def profile
+    @bookings = Booking.where(user: current_user)
   end
 
   def review
