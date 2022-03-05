@@ -23,7 +23,7 @@ class PlacesController < ApplicationController
   #   @booking = Booking.new
   # end
   def show
-    @place = Place.new
+     @booking = Booking.new
   end
   # def edit
   # end
