@@ -10,21 +10,41 @@ class PlacesController < ApplicationController
   #   @place = Place.new
   # end
 
-  # def create
-  #   @place = Place.new(place_params)
-  #   if @place.save
-  #     redirect_to places_path
-  #   else
-  #     render :new
-  #   end
-  # end
+  def create
+    @place = Place.new(place_params)
+    if @place.save
+      redirect_to places_path
+    else
+      render :new
+    end
+  end
 
   # def show
   #   @booking = Booking.new
   # end
+
   def show
-     @booking = Booking.new
+    @booking = Booking.new
+    @markers =
+      [{
+        lat: @place.latitude,
+        lng: @place.longitude
+      }]
   end
+
+  private
+
+  def set_place
+    @place = Place.find(params[:id])
+  end
+
+  def place_params
+    params.require(:place).permit(:name, :address, :description, :website, :map_url, :phone_number)
+  end
+
+end
+
+
   # def edit
   # end
 
@@ -37,14 +57,3 @@ class PlacesController < ApplicationController
   #   @place.destroy
   #   redirect_to places_path
   # end
-
-  private
-
-  def set_place
-    @place = Place.find(params[:id])
-  end
-
-  def place_params
-    params.require(:place).permit(:name, :address, :description, :website, :map_url, :phone_number)
-  end
-end

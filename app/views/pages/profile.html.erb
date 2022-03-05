@@ -11,8 +11,8 @@
                 <h4>You booked an angel for your date at <%= booking.place.name %></h4>
                   <h5>Booked for <%= booking.date %></h5>
                 </div>
-                  <%= link_to "Summary", "/bookings/#{booking.id}", class: "button-profile" %>
-                  <%= link_to "Check-in", "/checkin", class: "button-profile" %>
+                  <%= link_to "Summary", "/bookings/#{booking.id}", class: "myButton" %>
+                  <%= link_to "Check-in", "/checkin", class: "myButton" %>
             </div>
             <% end %>
           </div>
