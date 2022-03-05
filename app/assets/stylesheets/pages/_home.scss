@@ -1,1 +1,14 @@
 // Specific CSS for your home-page
+.homepage_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background: #f9f9f965;
+}
+.white_box {
+  background: #f9f9f9;
+  margin: 10px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
