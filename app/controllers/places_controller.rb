@@ -19,10 +19,12 @@ class PlacesController < ApplicationController
   #   end
   # end
 
+  # def show
+  #   @booking = Booking.new
+  # end
   def show
-    @booking = Booking.new
+    @place = Place.new
   end
-
   # def edit
   # end
 
