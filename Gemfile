@@ -26,7 +26,6 @@ gem 'jquery-rails'
 gem 'popper_js', '>= 2.9.3'
 
 
-
 gem 'dotenv-rails', groups: [:development, :test]
 
 # Use Active Storage variant
@@ -64,3 +63,5 @@ end
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 gem 'faker'
+gem 'geocoder'
+gem 'gmaps4rails'
