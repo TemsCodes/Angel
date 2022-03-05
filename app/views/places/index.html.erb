@@ -1,11 +1,17 @@
+<style>
+body {
+  background-image: url('https://images.unsplash.com/photo-1517315003714-a071486bd9ea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1742&q=80');
+}
+</style>
 
 <div class= "homepage_wrapper">
+
 <div class="homepage-text">
   <%# <h1>PICK A DATE</h1> %>
   <h1>Welcome Manu!</h1>
   <p>Book your Angel today</p>
 </div>
-
+<div class= "white_box">
 <div class="front-page">
   <%# <%= video_tag "#insertvideo", class: "home_video" %>
 </div>
@@ -29,7 +35,7 @@
       <% if @booking %>
         <p> You have an upcoming Angel booking at <%= @booking.place.name %> </p>
         <%= @booking.date %>
-        <a class="btn btn-ghost" id="Check-in" href="/checkin">Check in</a>
+        <a class="myButton" id="Check-in" href="/checkin">Check in</a>
       <% end %>
     </div>
   </div>
@@ -48,5 +54,8 @@
       <%# <h2 class="card-trip-pricing">Top ranking</h2> %>
   </div>
   <% end %>
-</ul> </div>
-</div></div>
+</ul>
+</div>
+</div>
+</div>
+</div>
