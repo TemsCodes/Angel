@@ -65,3 +65,5 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'faker'
 gem 'geocoder'
 gem 'gmaps4rails'
+gem "whatsapp"
+gem 'twilio-ruby' 
