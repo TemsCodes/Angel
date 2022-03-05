@@ -28,3 +28,7 @@
   <%= f.submit "Check in on me", id:"checkin" %>
   <% end %>
 
+  <%= form_with url:send_call_path do |f| %>
+  <%= f.submit "Call me", id:"callme" %>
+  <% end %>
+
