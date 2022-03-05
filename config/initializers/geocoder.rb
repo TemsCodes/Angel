@@ -1,3 +1,4 @@
+
 Geocoder.configure(
   units: :km,
   # Geocoding options
@@ -12,18 +13,18 @@ Geocoder.configure(
   # cache: nil,                 # cache object (must respond to #[], #[]=, and #del)
   # cache_prefix: 'geocoder:',  # DEPRECATED, please use cache_options[:prefix] instead
 
-  # Exceptions that should not be rescued by default
-  # (if you want to implement custom error handling);
-  # supports SocketError and Timeout::Error
-  # always_raise: [],
+#   # Exceptions that should not be rescued by default
+#   # (if you want to implement custom error handling);
+#   # supports SocketError and Timeout::Error
+#   # always_raise: [],
 
-  # Calculation options
-  # units: :mi,                 # :km for kilometers or :mi for miles
-  # distances: :linear          # :spherical or :linear
+#   # Calculation options
+#   # units: :mi,                 # :km for kilometers or :mi for miles
+#   # distances: :linear          # :spherical or :linear
 
-  # Cache configuration
-  # cache_options: {
-  #   expiration: 2.days,
-  #   prefix: 'geocoder:'
-  # }
-)
+#   # Cache configuration
+#   # cache_options: {
+#   #   expiration: 2.days,
+#   #   prefix: 'geocoder:'
+#   # }
+# )

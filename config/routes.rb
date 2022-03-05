@@ -12,5 +12,5 @@ Rails.application.routes.draw do
   post "booking", to: 'booking#create'
   get "checkin", to: 'pages#checkin'
   post "send-message", to: 'pages#send_message'
-
+  post "send-call", to: 'pages#send_call'
 end

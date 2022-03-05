@@ -20,8 +20,11 @@ class PagesController < ApplicationController
   end 
 
   def send_message
-    account_sid = ACCOUNT_SID
-    auth_token = AUTH_TOKEN
+# @test = ENV['ACCOUNT_SID']
+# @test2 = ENV['AUTH_TOKEN']
+# raise
+    account_sid = ENV['ACCOUNT_SID']
+    auth_token = ENV['AUTH_TOKEN']
     @client = Twilio::REST::Client.new(account_sid, auth_token) 
      
     message = @client.messages.create( 
@@ -33,15 +36,16 @@ class PagesController < ApplicationController
   end
 
 def send_call
-  account_sid = ACCOUNT_SID
-  auth_token = AUTH_TOKEN
+  account_sid = ENV['ACCOUNT_SID']
+  auth_token = ENV['AUTH_TOKEN']
+  
   
   # set up a client to talk to the Twilio REST API
   @client = Twilio::REST::Client.new(account_sid, auth_token)
   
   call = @client.calls.create(
       to: "+447931848516",
-      from: "+15017122661",
+      from: "+17123877099",
       url: "http://demo.twilio.com/docs/voice.xml")
   puts call.to
 end 
