@@ -3,17 +3,17 @@
 </div>
 
 <div class="container">
-<a class="btn btn-ghost" id="checkin" href="#">Check in on me</a>
+<%# <a class="btn btn-ghost" id="checkin" href="#">Check in on me</a> %>
 <%# <%= link_to "Check in on me", place_path(@path), class: "btn btn-ghost" %>
  </div>
 <div class="container">
 <%# <a class="btn btn-ghost" id="call-me" href="#">Call me</a> %>
-<a href="tel:5554280940">Call Angel</a>
+<a href="tel:5554280940">Call me</a>
 <%# <%= link_to "Call me", place_path(@path), class: "btn btn-ghost" %>
 </div>
 <div class="container">
 <a class="btn btn-ghost" id="finished" href="#">Date is finished</a>
-<%= link_to "Review your date", "/places", class: "button" %>
+<%# <%= link_to "Review your date", "/places", class: "button" %>
 <%# <%= link_to "Date is finished", place_path(@path), class: "btn btn-ghost" %>
 <%# <div class="flash flash-success alert alert-dismissible fade show" role="alert">
   <span><strong>Great!</strong> 🎉 a member of staff will be with your shortly.</span>
@@ -21,3 +21,7 @@
     <i class="fas fa-times"></i>
   </a>
 </div> %>
+
+<%= form_with url:send_message_path do |f| %>
+  <%= f.submit "Check in on me", id:"checkin" %>
+  <% end %>
