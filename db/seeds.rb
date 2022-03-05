@@ -26,10 +26,10 @@ tate_picture = URI.open('https://res.cloudinary.com/dfljjticx/image/upload/v1644
 
 puts 'Creating places'
 tate = Place.create!(
-  name: "Tate Modern London",
-  description: "Access the latest exhibition",
+  name: "Pizza Express",
+  description: "Great Pizza good price",
   address: "Bankside, London SE1 9TG",
-  website: "https://www.tate.org.uk",
+  website: "https://www.pizzaeast.co.uk",
   phone_number: Faker::PhoneNumber.phone_number
 )
 
@@ -48,10 +48,6 @@ pizza_east = Place.create!(
 )
 
 pizza_east.photo.attach(io: pizzaeast_picture, filename: 'pizzaeast.png', content_type: 'image/png')
-
-
-
-
 
 # 20.times do
 #  place = Place.new
