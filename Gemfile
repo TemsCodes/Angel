@@ -26,11 +26,11 @@ gem 'jquery-rails'
 gem 'popper_js', '>= 2.9.3'
 
 
-gem 'dotenv-rails', groups: [:development, :test]
+ gem 'dotenv-rails', groups: [:development, :test]
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
-gem 'cloudinary', '~> 1.16.0'
+ gem 'cloudinary', '~> 1.16.0'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
@@ -66,4 +66,4 @@ gem 'faker'
 gem 'geocoder'
 gem 'gmaps4rails'
 gem "whatsapp"
-gem 'twilio-ruby' 
+gem 'twilio-ruby'
