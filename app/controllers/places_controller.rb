@@ -2,14 +2,8 @@ class PlacesController < ApplicationController
   before_action :set_place, only: [:show, :edit, :update, :destroy]
 
   def index
-    if params[:query].present?
-      @query = params[:query]
-      @places = Place.where("name LIKE ?", "%#{params[:query]}%")
-      # Preventing SQL Injection and Database error for
-      # unknown characters
-    else
-      @places = Place.all
-    end
+    @booking = current_user.bookings.where('date >= ?', DateTime.now).first if current_user.bookings
+    @places = Place.all
   end
 
   # def new

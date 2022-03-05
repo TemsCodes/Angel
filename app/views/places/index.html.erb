@@ -24,10 +24,20 @@
 </div>
 
 <div class="container">
+  <div class="card-trip">
+    <div class="card-trip-infos">
+      <% if @booking %>
+        <p> You have an upcoming Angel booking at <%= @booking.place.name %> </p>
+        <%= @booking.date %>
+        <a class="btn btn-ghost" id="Check-in" href="/checkin">Check in</a>
+      <% end %>
+    </div>
+  </div>
       <ul class="list-group">
         <% @places.each do |place| %>
   <div class="card-trip-infos">
-      <div>
+
+
       <% if place.photo.attached? %>
       <%#= cl_image_tag place.photo.key, height: 300, width: 400, crop: :fill %>
       <img src="https://res.cloudinary.com/dfljjticx/image/upload/v1644669676/pizzaeast_j438iw.jpg" style="height: 300px; width: 400px;">

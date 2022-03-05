@@ -1,5 +1,6 @@
 <div>
 <h1>You're checked in!</h1>
+    <i class="fa-duotone fa-angel"></i>
 </div>
 
 <div class="container">
@@ -12,6 +13,7 @@
 <%# <%= link_to "Call me", place_path(@path), class: "btn btn-ghost" %>
 </div>
 <div class="container">
+
 <a class="btn btn-ghost" id="finished" href="#">Date is finished</a>
 <%# <%= link_to "Review your date", "/places", class: "button" %>
 <%# <%= link_to "Date is finished", place_path(@path), class: "btn btn-ghost" %>
@@ -25,3 +27,4 @@
 <%= form_with url:send_message_path do |f| %>
   <%= f.submit "Check in on me", id:"checkin" %>
   <% end %>
+
