@@ -64,3 +64,5 @@ end
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 gem 'faker'
+gem "whatsapp"
+gem 'twilio-ruby' 
