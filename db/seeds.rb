@@ -7,8 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 puts "Cleaning database..."
+User.destroy_all
 Place.destroy_all
 # remove all the instances
+
+User.create!(first_name: "Manu", last_name: "", email: "manu@angel.com", password: "123456")
 
 20.times do
  user = User.new
@@ -19,8 +22,6 @@ Place.destroy_all
  # user.phone_number = Faker::PhoneNumber.cell_phone
  user.save!
 end
-
-
 
 
 pizzaeast_picture = URI.open('https://res.cloudinary.com/dfljjticx/image/upload/v1644669676/pizzaeast_j438iw.jpg')

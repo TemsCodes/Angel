@@ -6,9 +6,13 @@
       <h5><%= @place.description %></h5>
       <h5><%= @place.website %></h5>
       <h5><%= @place.phone_number %></h5>
-      <h5>MAP</h5>
 
-      <%# <%= image_tag "https://www.tate.org.uk/sites/default/files/styles/width-600/public/tate_britain_exterior_1.jpg" %>
+     <div id="map"
+     style="width: 100%; height: 600px;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+
+      <%= image_tag "https://www.tate.org.uk/sites/default/files/styles/width-600/public/tate_britain_exterior_1.jpg" %>
       <div class="row">
         <div class="col-xs-12 col-sm-10 col-sm-offset-1">
         </div>
