@@ -21,6 +21,11 @@ Geocoder.configure(
   #   # units: :mi,                 # :km for kilometers or :mi for miles
   #   # distances: :linear          # :spherical or :linear
 
+#   # Cache configuration
+#   # cache_options: {
+#   #   expiration: 2.days,
+#   #   prefix: 'geocoder:'
+#   # }
   #   # Cache configuration
   #   # cache_options: {
   #   #   expiration: 2.days,
