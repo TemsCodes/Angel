@@ -2,34 +2,29 @@
   <%= link_to "/places", class: "navbar-brand" do %>
     <%= image_tag "https://cdn-icons-png.flaticon.com/512/1764/1764571.png" %>
   <% end %>
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <%# <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
-  </button>
-
-
-
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <% if user_signed_in? %>
-        <li class="nav-item active">
-          <%= link_to "/places", class: "navbar-icons" do %>
+  </button> %>
+  <%# <div class="collapse navbar-collapse" id="navbarSupportedContent"> %>
+  <ul class="navbar-nav" style="flex-direction: row;">
+    <% if user_signed_in? %>
+      <li class="nav-item active">
+        <%= link_to "/places", class: "navbar-icons" do %>
           <%= image_tag "https://pic.onlinewebfonts.com/svg/img_382824.png" %>
-          <% end %>
-        </li>
-        <li class="nav-item">
-          <%# <%= link_to "/places", class: "navbar-icons" do %>
+        <% end %>
+      </li>
+      <li class="nav-item">
+        <%# <%= link_to "/places", class: "navbar-icons" do %>
           <a href="tel:07385024877" class="navbar-icons">
-          <%= image_tag "https://img.icons8.com/ios-filled/344/phone.png" %>
+            <%= image_tag "https://img.icons8.com/ios-filled/344/phone.png" %>
           </a>
           <%# <% end %>
         </li>
         <li class="nav-item dropdown">
-            <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://media-exp1.licdn.com/dms/image/C4D03AQEeDt__IceKgA/profile-displayphoto-shrink_800_800/0/1610963974924?e=1649894400&v=beta&t=ce2kruwF7C1QNxjI9i9yp5lyLyXgXVyjuo8X_R8igZA" />
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="/profile">Profile</a>
-              <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+          <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://media-exp1.licdn.com/dms/image/C4D03AQEeDt__IceKgA/profile-displayphoto-shrink_800_800/0/1610963974924?e=1649894400&v=beta&t=ce2kruwF7C1QNxjI9i9yp5lyLyXgXVyjuo8X_R8igZA" />
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"  style="position: absolute;">
+            <a class="dropdown-item" href="/profile">Profile</a>
+            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>
       <% else %>
@@ -38,5 +33,5 @@
         </li>
       <% end %>
     </ul>
+    <%# </div> %>
   </div>
-</div>
