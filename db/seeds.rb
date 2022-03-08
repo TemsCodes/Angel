@@ -24,21 +24,6 @@ User.create!(first_name: "Manu", last_name: "", email: "manu@angel.com", passwor
 end
 
 
-tate_picture = URI.open('https://res.cloudinary.com/dfljjticx/image/upload/v1644665936/tate_britain_exterior_1_yyyfwz.jpg')
-
-
-puts 'Creating places'
-tate = Place.create!(
-  name: "Pizza Express",
-  description: "Great Pizza good price",
-  address: "Bankside, London SE1 9TG",
-  website: "https://www.pizzaeast.co.uk",
-  phone_number: Faker::PhoneNumber.phone_number
-)
-
-tate.photo.attach(io: tate_picture, filename: 'tate.png', content_type: 'image/png')
-
-
 pizzaeast_picture = URI.open('https://res.cloudinary.com/dfljjticx/image/upload/v1644669676/pizzaeast_j438iw.jpg')
 
 puts 'Creating places'
@@ -51,6 +36,100 @@ pizza_east = Place.create!(
 )
 
 pizza_east.photo.attach(io: pizzaeast_picture, filename: 'pizzaeast.png', content_type: 'image/png')
+
+# INCLUDE IMAGE
+puts 'Creating places'
+steak_co = Place.create!(
+  name: "Steak&Co",
+  description: "Great steak in Leicester",
+  address: "Leicester, 3-5 Charing Cross Rd, London WC2H 0HA",
+  website: "http://www.steakandco.blog/",
+  phone_number: Faker::PhoneNumber.phone_number
+)
+# INCLUDE IMAGE
+
+# INCLUDE IMAGE
+puts 'Creating places'
+frenchie = Place.create!(
+  name: "Frenchie Covent Garden",
+  description: "Wonderful french restaurant",
+  address: "16 Henrietta St, London WC2E 8QH",
+  website: "http://www.frenchiecoventgarden.com/",
+  phone_number: Faker::PhoneNumber.phone_number
+)
+# INCLUDE IMAGE
+
+# INCLUDE IMAGE
+puts 'Creating places'
+kiln = Place.create!(
+  name: "Kiln",
+  description: "Incredible fusion restaurant Soho",
+  address: "58 Brewer St, London W1F 9TL",
+  website: "http://www.kilnsoho.com/",
+  phone_number: Faker::PhoneNumber.phone_number
+)
+# INCLUDE IMAGE
+
+# INCLUDE IMAGE
+puts 'Creating places'
+bocca_di_lupo = Place.create!(
+  name: "Bocca di Lupo",
+  description: "Authentic small or large plate Italian dining",
+  address: "12 Archer St, London W1D 7BB",
+  website: "http://www.boccadilupo.com/",
+  phone_number: Faker::PhoneNumber.phone_number
+)
+# INCLUDE IMAGE
+
+# INCLUDE IMAGE
+puts 'Creating places'
+barrafina = Place.create!(
+  name: "Barrafina",
+  description: "Delicious Spanish cuisine in London",
+  address: "26-27 Dean St, London W1D 3LL",
+  website: "http://www.barrafina.co.uk/",
+  phone_number: Faker::PhoneNumber.phone_number
+)
+# INCLUDE IMAGE
+
+# INCLUDE IMAGE
+puts 'Creating places'
+bob_bob_ricard = Place.create!(
+  name: "Bob Bob Ricard Soho",
+  description: "Uniformed staff serve Russian-inspired Modern British menu",
+  address: "1 Upper James St, London W1F 9DF",
+  website: "http://www.bobbobricard.com/",
+  phone_number: Faker::PhoneNumber.phone_number
+)
+# INCLUDE IMAGE
+
+# INCLUDE IMAGE
+puts 'Creating places'
+luca = Place.create!(
+  name: "Luca",
+  description: "Warm, vintage, brick-lined restaurant featuring an elevated Italian menu",
+  address: " 88 St John St, London EC1M 4EH",
+  website: "https://luca.restaurant/",
+  phone_number: Faker::PhoneNumber.phone_number
+)
+# INCLUDE IMAGE
+
+# INCLUDE IMAGE
+puts 'Creating places'
+luca = Place.create!(
+  name: "Luca",
+  description: "Warm, vintage, brick-lined restaurant featuring an elevated Italian menu",
+  address: " 88 St John St, London EC1M 4EH",
+  website: "https://luca.restaurant/",
+  phone_number: Faker::PhoneNumber.phone_number
+)
+# INCLUDE IMAGE
+
+
+
+
+
+
 
 # 20.times do
 #  place = Place.new
