@@ -1,26 +1,31 @@
 <div class="bookings">
-   <h3 class="sub-heading">YOUR INFORMATION</h3>
+   <h3 class="sub-heading">Your information</h3>
     <div class="container">
       <div class="row">
         <div class="col-12">
           <div class="card-trip">
             <div class="card-trip-infos">
-              <div>
+              <div class="w-100">
                 <h4><b>Your name:</b> Renee Godyn</h4>
                 <h4><b>Your phone number:</b> +447385371662</h4>
                 <h4><b>Your e-mail address:</b> renee.godyn@gmail.com</h4>
+                <div class="d-flex justify-content-end">
+                  <%= link_to "Edit?", "/", class: "myButton" %>
+                </div>
               </div>
-                <%= link_to "Edit?", "/checkin", class: "myButton" %>
             </div>
           </div>
         </div>
       </div>
     </div>
-   <h3 class="sub-heading">YOUR BOOKINGS</h3>
+   <h3 class="sub-heading">Your bookings</h3>
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <% @bookings.each do |booking|%>
+          <% @bookings.each_with_index do |booking, index|%>
+          <% unless index == 0 %>
+          <div class="w-100 line_break"></div>
+          <% end %>
           <div class="card-trip">
               <%# <img src="https://www.tate.org.uk/sites/default/files/styles/width-720/public/images/people-on-the-millennium-br_0.jpg"> %>
               <div class="card-trip-infos">
@@ -29,7 +34,7 @@
                   <h5>Booked for <%= booking.date %></h5>
                 </div>
                   <%= link_to "Summary", "/bookings/#{booking.id}", class: "myButton" %>
-                  <%= link_to "Check-in", "/checkin", class: "myButton" %>
+                  <%= link_to "Check-in", "/checkin", class: "myButton-primary" %>
             </div>
             <% end %>
           </div>

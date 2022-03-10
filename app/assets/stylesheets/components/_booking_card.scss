@@ -1,11 +1,11 @@
   .card-trip .card-trip-infos {
     padding: 16px;
-    display: flex;
+    // display: flex;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 16px;
     padding: 16px;
-    justify-content: space-between;
-    align-items: flex-end;
+    // justify-content: space-between;
+    // align-items: flex-end;
     position: relative;
     border-radius: 20px;
   }
@@ -14,10 +14,11 @@
     right: 16px;
     top: -20px;
     width: 40px;
+
   }
   .card-trip {
     overflow: hidden;
-    background: white;
+    background: rgb(255, 255, 255);
     margin: 10px 0px;
     border-radius: 20px;
   }
@@ -36,3 +37,6 @@
     opacity: .7;
     margin: 0;
   }
+.line_break {
+  border-top: 1px solid #f1efef;
+}
