@@ -23,13 +23,11 @@ import "bootstrap";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
-import { review } from '../components/review';
+// import { review } from '../components/review';
 import { displayAlertOnButtonClick } from '../components/checkin';
-import { initMapbox } from '../plugins/init_mapbox';
-
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
 // review();
-// displayAlertOnButtonClick();
-initMapbox();
+
+displayAlertOnButtonClick();
 });
