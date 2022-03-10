@@ -20,19 +20,54 @@
     background: white;
     margin: 10px 0px;
     border-radius: 20px;
+    box-shadow: 0px 2px 4px  rgba(0,0,0,.2);
   }
-  .card-trip > img {
+  .list-group > img {
+    min-height: 200px;
     height: 200px;
     width: 100%;
     object-fit: cover;
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-bottom: 5px;
   }
   .card-trip h2 {
     font-size: 16px;
     font-weight: bold;
     margin: 0;
   }
+
+  .card-trip a {
+    color: #242424;
+    text-decoration: none;
+}
+
+  .card-trip:hover a {
+     color: #ca4040;
+  }
+
   .card-trip p {
     font-size: 12px;
     opacity: .7;
     margin: 0;
+  }
+
+  .front-page img {
+    min-height: 200px;
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    padding-top: 10px;
+  }
+
+  .row h1 {
+    font-family: "Work Sans", "Helvetica", "sans-serif";
+    color: #242424;
+    text-align: center;
+  }
+
+  .homepage-text {
+    text-align: center;
+    padding-top: 10px;
   }

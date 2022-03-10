@@ -8,22 +8,17 @@
     <%# <h1>PICK A DATE</h1> %>
     <h1>Welcome Renée!</h1>
     <p>Book your Angel today</p>
+      <div class="front-page">
+        <%# <%= video_tag "#insertvideo", class: "home_video" %>
+        <%= image_tag "https://targettiles.co.uk/wp-content/uploads/2019/09/products-sku4756_810.jpg.webp" %>
+      </div>
   </div>
   <div class= "white_box">
     <div class="front-page">
       <%# <%= video_tag "#insertvideo", class: "home_video" %>
     </div>
     <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-          <h1>All dating places</h1>
-          <div class="search-bar-index">
-            <form action="/places" accept-charset="UTF-8" method="get">
-              <input type="text" name="query" id="form-placeholder" class="form control form-search" placeholder="Find an place..."><input type="submit" name="commit" value="Search" class="btn-search btn-search-index btn-place-new" data-disable-with="Search">
-            </form>
-          </div>
-        </div>
-      </div>
+
       <div class="container">
         <div class="card-trip">
           <div class="card-trip-infos">
@@ -34,20 +29,29 @@
             <% end %>
           </div>
         </div>
+        <div class="row">
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+          <h1>All dating places</h1>
+        </div>
+      </div>
+        <div class="card-trip">
+        <div class="card-trip-infos">
         <ul class="list-group">
           <% @places.each do |place| %>
-            <div class="card-trip-infos">
               <% if place.photo.attached? %>
-                <%#= cl_image_tag place.photo.key, height: 300, width: 400, crop: :fill %>
-                <img src="https://res.cloudinary.com/dfljjticx/image/upload/v1644669676/pizzaeast_j438iw.jpg" style="height: 300px; width: 400px;">
+                <%= cl_image_tag place.photo.key, crop: :fill %>
+                <% else %>
+                <img src="https://res.cloudinary.com/dfljjticx/image/upload/v1644669676/pizzaeast_j438iw.jpg" style="height: 100%; width: 100%;"  >
               <% end %>
+              <p> </p>
               <h2><%= link_to place.name, place_path(place) %></h2>
-              <p><%= place.description %></p>
-            </div>
+              <p class="mb-4"><%= place.description %></p>
+
             <%# <h2 class="card-trip-pricing">Top ranking</h2> %>
-          </div>
         <% end %>
       </ul>
+      </div>
+      </div>
     </div>
   </div>
 </div>
