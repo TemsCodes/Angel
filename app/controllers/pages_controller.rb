@@ -30,7 +30,7 @@ class PagesController < ApplicationController
     message = @client.messages.create( 
                                  body: 'Your angel will be with you shortly', 
                                  from: 'whatsapp:+14155238886',       
-                                 to: 'whatsapp:+447931848516' 
+                                 to: 'whatsapp:+447385024877' 
                                ) 
   
   end
@@ -44,7 +44,7 @@ def send_call
   @client = Twilio::REST::Client.new(account_sid, auth_token)
   
   call = @client.calls.create(
-      to: "+447931848516",
+      to: "+447385024877",
       from: "+17123877099",
       url: "http://demo.twilio.com/docs/voice.xml")
   puts call.to
