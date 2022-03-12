@@ -30,9 +30,9 @@ puts 'Creating places'
 pizza_east = Place.create!(
   name: "Pizza East Shoreditch",
   description: "Best Pizza date in London!",
-  address: "56A Shoreditch High St, London E1 6JJ",
+  address: "56A Shoreditch High St, London, E1 6JJ",
   website: "https://www.pizzaeast.com/",
-  phone_number: Faker::PhoneNumber.phone_number
+  phone_number: Faker::PhoneNumber.phone_number,
 )
 
 pizza_east.photo.attach(io: pizzaeast_picture, filename: 'pizzaeast.png', content_type: 'image/png')

@@ -1,24 +1,114 @@
-.shop-profile-header {
-    overflow: hidden;
+body {
+  background-color: white;
 }
 
-.shop-profile-header--hero {
-    background-size: cover;
-    background-position: 50%;
+.container {
+  text-align: center;
+  margin-bottom: 50px;
 }
 
-.shop-profile-header--hero:before {
-    content: "";
-    height: 100%;
-    width: 100%;
-    left: 0;
-    bottom: 0;
-    position: absolute;
-    display: block;
-    background-image: linear-gradient(180deg,transparent,rgba(0,0,0,.313725));
-    z-index: 0;
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-element.style {
-    background-image: url("file:///Users/taniapapamikrou/code/TaniaPapamikrou/angel/app/assets/stylesheets/pages/images/photo.png");
+.title h2 {
+  width: 700px;
+  margin-bottom: 16px;
+  padding-bottom: 26px;
+  border-bottom: 4px solid #E7E7EA;
+}
+
+.title h3 {
+  margin-top: 8px;
+}
+
+h2, h3, p {
+font-family: 'Montserrat', sans-serif;
+letter-spacing: 9px;
+font-weight: 300;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+p {
+  font-size: 18px;
+  margin-top: -2px;
+  margin-bottom: 22px;
+}
+
+#image {
+ object-fit: contain;
+ height: 400px;
+ width: 100%;
+ padding: 40px 16px;
+ margin-bottom: 10px;
+ margin-top: 10px;
+ border-radius: 5px;
+}
+
+.container {
+  // margin: 30px 50px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.row.info {
+  margin-top: 45px;
+}
+
+.place-info {
+  padding: 40px 16px 49px 16px;
+  text-align: center;
+  margin-bottom: 1px;
+  margin-top: 1px;
+  box-shadow: 0 0px 55px rgba(0, 0, 0, 0.2);
+  // border-radius: 5px;
+  min-height: 48px;
+}
+
+.island-info h4 {
+  font-size: 24px;
+  color: #8E004C;
+}
+
+
+#place-description {
+  text-align: justify;
+  line-height: 31px;
+  letter-spacing: 1px;
+  padding: 16px;
+}
+
+.booking-form {
+  padding: 40px 16px;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  box-shadow: 0 0px 55px rgba(0, 0, 0, 0.2);
+  // border-radius: 5px;
+  height: 550px;
+}
+
+.booking-form h3 {
+  font-size: 29px;
+  font-weight: bold;
+}
+
+.map-box {
+  padding: 40px 16px;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  box-shadow: 0 0px 55px rgba(0, 0, 0, 0.2);
+  // border-radius: 5px;
+  height: 550px;
+}
+
+.btn {
+  padding: 0.5rem 1.5rem;
+  border-radius: 8px;
 }
