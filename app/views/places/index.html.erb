@@ -1,8 +1,4 @@
-<style>
-  body {
-    background-color: #e0dede
-  }
-</style>
+
 <div class= "homepage_wrapper">
   <div class="homepage-text">
     <%# <h1>PICK A DATE</h1> %>
@@ -25,7 +21,7 @@
             <% if @booking %>
               <p> You have an upcoming Angel booking at <%= @booking.place.name %> </p>
               <%= @booking.date %>
-              <a class="myButton" id="Check-in" href="/checkin">Check in</a>
+              <a class="myButton-primary" id="Check-in" href="/checkin">Check in</a>
             <% end %>
           </div>
         </div>
