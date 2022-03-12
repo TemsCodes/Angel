@@ -1,16 +1,14 @@
-<div class = "container, border">
+
   <div class="confirmation-text">
     <h1>Your Angel is confirmed</h1>
     <p>You will be taken care of at</p>
   </div>
-   <div class="card-trip-infos">
-
-                <%= cl_image_tag @booking.place.photo.key, crop: :fill %>
-                <h4> <%= @booking.place.name %></h4>
-                  <h5>Booked for <%= @booking.date %></h5>
-                  <h5>Told us you'd be wearing <%= @booking.details %></h5>
-                </div>
-                  <%= link_to "Back", "/profile/", class: "myButton" %>
-            </div>
-
-</div>
+    <div class="card-trip confirmation-card">
+      <div class="card-trip-infos">
+          <%= cl_image_tag @booking.place.photo.key, crop: :fill %>
+          <h2> <%= @booking.place.name %></h2>
+          <h5>Booked for <%= @booking.date %></h5>
+          <h5>Told us you'd be wearing <%= @booking.details %></h5>
+      </div>
+    </div>
+    <%= link_to "Back", "/profile/", class: "myButton" %>
