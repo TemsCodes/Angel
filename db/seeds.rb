@@ -24,7 +24,7 @@ User.create!(first_name: "Manu", last_name: "", email: "manu@angel.com", passwor
 end
 
 
-pizzaeast_picture = URI.open('https://res.cloudinary.com/dfljjticx/image/upload/v1644669676/pizzaeast_j438iw.jpg')
+pizzaeast_picture = URI.open('https://res.cloudinary.com/dfljjticx/image/upload/v1646943455/pizza-east-portobello_egckpp.jpg')
 
 puts 'Creating places'
 pizza_east = Place.create!(
@@ -37,7 +37,8 @@ pizza_east = Place.create!(
 
 pizza_east.photo.attach(io: pizzaeast_picture, filename: 'pizzaeast.png', content_type: 'image/png')
 
-# INCLUDE IMAGE
+steak_co_picture = URI.open('https://res.cloudinary.com/dfljjticx/image/upload/v1646943455/steak_co_c0edqe.jpg')
+
 puts 'Creating places'
 steak_co = Place.create!(
   name: "Steak&Co",
@@ -46,9 +47,10 @@ steak_co = Place.create!(
   website: "http://www.steakandco.blog/",
   phone_number: Faker::PhoneNumber.phone_number
 )
-# INCLUDE IMAGE
+steak_co.photo.attach(io: steak_co_picture, filename: 'steak_co.png', content_type: 'image/png')
 
-# INCLUDE IMAGE
+frenchie_picture = URI.open('https://res.cloudinary.com/dfljjticx/image/upload/v1646943455/frenchie_hoi0uh.jpg')
+
 puts 'Creating places'
 frenchie = Place.create!(
   name: "Frenchie Covent Garden",
@@ -57,9 +59,11 @@ frenchie = Place.create!(
   website: "http://www.frenchiecoventgarden.com/",
   phone_number: Faker::PhoneNumber.phone_number
 )
-# INCLUDE IMAGE
 
-# INCLUDE IMAGE
+frenchie.photo.attach(io: frenchie_picture, filename: 'frenchie.png', content_type: 'image/png')
+
+kiln_picture = URI.open('https://res.cloudinary.com/dfljjticx/image/upload/v1646943456/kiln_wrazdq.jpg')
+
 puts 'Creating places'
 kiln = Place.create!(
   name: "Kiln",
@@ -68,9 +72,12 @@ kiln = Place.create!(
   website: "http://www.kilnsoho.com/",
   phone_number: Faker::PhoneNumber.phone_number
 )
-# INCLUDE IMAGE
 
-# INCLUDE IMAGE
+kiln.photo.attach(io: kiln_picture, filename: 'kiln.png', content_type: 'image/png')
+
+
+bocca_picture = URI.open('https://res.cloudinary.com/dfljjticx/image/upload/v1646943455/bocca_di_lupo_kdlpod.jpg')
+
 puts 'Creating places'
 bocca_di_lupo = Place.create!(
   name: "Bocca di Lupo",
@@ -79,9 +86,10 @@ bocca_di_lupo = Place.create!(
   website: "http://www.boccadilupo.com/",
   phone_number: Faker::PhoneNumber.phone_number
 )
-# INCLUDE IMAGE
+bocca_di_lupo.photo.attach(io: bocca_picture, filename: 'bocca.png', content_type: 'image/png')
 
-# INCLUDE IMAGE
+barrafina_picture = URI.open('https://res.cloudinary.com/dfljjticx/image/upload/v1646943455/barrafina_qcuu8y.jpg')
+
 puts 'Creating places'
 barrafina = Place.create!(
   name: "Barrafina",
@@ -90,9 +98,10 @@ barrafina = Place.create!(
   website: "http://www.barrafina.co.uk/",
   phone_number: Faker::PhoneNumber.phone_number
 )
-# INCLUDE IMAGE
+barrafina.photo.attach(io: barrafina_picture, filename: 'barrafina.png', content_type: 'image/png')
 
-# INCLUDE IMAGE
+bob_picture = URI.open('https://res.cloudinary.com/dfljjticx/image/upload/v1646943455/bob-bob-ricard_izl2uk.jpg')
+
 puts 'Creating places'
 bob_bob_ricard = Place.create!(
   name: "Bob Bob Ricard Soho",
@@ -101,9 +110,12 @@ bob_bob_ricard = Place.create!(
   website: "http://www.bobbobricard.com/",
   phone_number: Faker::PhoneNumber.phone_number
 )
-# INCLUDE IMAGE
 
-# INCLUDE IMAGE
+bob_bob_ricard.photo.attach(io: bob_picture, filename: 'bob_bob_ricard.png', content_type: 'image/png')
+
+
+luca_picture = URI.open('https://res.cloudinary.com/dfljjticx/image/upload/v1646943455/luca_rqvxum.jpg')
+
 puts 'Creating places'
 luca = Place.create!(
   name: "Luca",
@@ -112,18 +124,21 @@ luca = Place.create!(
   website: "https://luca.restaurant/",
   phone_number: Faker::PhoneNumber.phone_number
 )
-# INCLUDE IMAGE
 
-# INCLUDE IMAGE
+luca.photo.attach(io: luca_picture, filename: 'luca.png', content_type: 'image/png')
+
+
+sexy_picture = URI.open('https://res.cloudinary.com/dfljjticx/image/upload/v1646944415/sexy_k9s75i.jpg')
+
 puts 'Creating places'
-luca = Place.create!(
-  name: "Luca",
-  description: "Warm, vintage, brick-lined restaurant featuring an elevated Italian menu",
-  address: " 88 St John St, London EC1M 4EH",
-  website: "https://luca.restaurant/",
+sexy_fish = Place.create!(
+  name: "Sexy Fish",
+  description: "Swanky, art-filled setting for robata-grilled fish, raw-bar items & more.",
+  address: "Berkeley Square House, Berkeley Square, London W1J 6BR",
+  website: "https://sexyfish.com/",
   phone_number: Faker::PhoneNumber.phone_number
 )
-# INCLUDE IMAGE
+sexy_fish.photo.attach(io: sexy_picture, filename: 'sexy.png', content_type: 'image/png')
 
 
 
