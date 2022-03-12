@@ -9,6 +9,18 @@
     position: relative;
     border-radius: 20px;
   }
+    .card-trip .card-trip-infos-2 {
+    padding: 16px;
+    // display: flex;
+    background: rgb(244, 227, 247);
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 16px;
+    padding: 16px;
+    // justify-content: space-between;
+    // align-items: flex-end;
+    position: relative;
+    border-radius: 20px;
+  }
   .card-trip-infos .card-trip-user {
     position: absolute;
     right: 16px;
@@ -63,7 +75,7 @@
   }
 
   .row h1 {
-    font-family: "Work Sans", "Helvetica", "sans-serif";
+    font-family: "Clarkson", "Helvetica", "sans-serif";
     color: #242424;
     text-align: center;
   }

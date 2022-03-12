@@ -1,7 +1,7 @@
 
 .button-profile {
   color: #7D7B7B;
-  font-family: "Work Sans", "Helvetica", "sans-serif";
+  font-family: "Clarkson", "Helvetica", "sans-serif";
   font-size: 15px;
   border: 1px solid #0E0D0D;
   padding: 4px 10px;
@@ -17,7 +17,7 @@
 }
 .button-checkin {
     color: #7D7B7B;
-    font-family: "Work Sans", "Helvetica", "sans-serif";
+    font-family: "Clarkson", "Helvetica", "sans-serif";
     font-size: 15px;
     border: 1px solid #0E0D0D;
     padding: 4px 4px;
@@ -25,6 +25,23 @@
     font-weight: lighter;
     opacity: 0.8;
     transition: opacity 0.3s ease;
+}
+.button-checkin-2 {
+    color: white;
+    background: #380650;
+    font-family: "Clarkson", "Helvetica", "sans-serif";
+    font-size: 15px;
+    border: 1px solid #380650;
+    padding: 4px 4px;
+    border-radius: 12px;
+    font-weight: lighter;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+.button-checkin-2:hover {
+     background: #e5e2e5e5;
+     color: rgb(0, 0, 0);
+     text-decoration: wavy;
 }
 .button-checkin:hover {
      background: #e5e2e5e5;
@@ -38,7 +55,8 @@
 	display:inline-block;
 	cursor:pointer;
 	color:#9b43be;
-	font-family:Arial;
+  font-family: "Clarkson", "Helvetica", "sans-serif";
+	// font-family:Arial;
 	font-size:12px;
 	padding: 8px 12px;
 	text-decoration:none;
@@ -51,7 +69,8 @@
 	display:inline-block;
 	cursor:pointer;
 	color:#232323;
-	font-family:Arial;
+  font-family: "Clarkson", "Helvetica", "sans-serif";
+	// font-family:Arial;
 	font-size:12px;
 	padding: 8px 12px;
 	text-decoration:none;
