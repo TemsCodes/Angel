@@ -2,7 +2,7 @@
 <div class= "homepage_wrapper">
   <div class="homepage-text">
     <%# <h1>PICK A DATE</h1> %>
-    <h1>Welcome Renée!</h1>
+    <h1>Welcome Renée</h1>
     <p>Book your Angel today</p>
       <div class="front-page">
         <%# <%= video_tag "#insertvideo", class: "home_video" %>
@@ -17,11 +17,13 @@
 
       <div class="container">
         <div class="card-trip">
-          <div class="card-trip-infos">
+          <div class="card-trip-infos-2">
             <% if @booking %>
-              <p> You have an upcoming Angel booking at <%= @booking.place.name %> </p>
-              <%= @booking.date %>
-              <a class="myButton-primary" id="Check-in" href="/checkin">Check in</a>
+              <h4> You have an upcoming Angel booking at <b><%= @booking.place.name %>.</b> </h4>
+              <div class="d-flex justify-content-between">
+              <h4 class="mt-2"><%= @booking.date %></h4>
+              <button class="button-checkin-2" id="Check-in" href="/checkin"><b>Check in</b></button>
+              </div>
             <% end %>
           </div>
         </div>
@@ -35,7 +37,7 @@
         <ul class="list-group">
           <% @places.each do |place| %>
               <% if place.photo.attached? %>
-                <%= cl_image_tag place.photo.key, crop: :fill %>
+               <a href="places/<%= place.id%>"> <%= cl_image_tag place.photo.key, crop: :fill %> </a>
                 <% else %>
                 <img src="https://res.cloudinary.com/dfljjticx/image/upload/v1644669676/pizzaeast_j438iw.jpg" style="height: 100%; width: 100%;"  >
               <% end %>

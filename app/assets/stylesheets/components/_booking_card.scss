@@ -9,6 +9,18 @@
     position: relative;
     border-radius: 20px;
   }
+    .card-trip .card-trip-infos-2 {
+    padding: 16px;
+    // display: flex;
+    background: rgb(244, 227, 247);
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 16px;
+    padding: 16px;
+    // justify-content: space-between;
+    // align-items: flex-end;
+    position: relative;
+    border-radius: 20px;
+  }
   .card-trip-infos .card-trip-user {
     position: absolute;
     right: 16px;
@@ -23,7 +35,7 @@
     border-radius: 20px;
     box-shadow: 0px 2px 4px  rgba(0,0,0,.2);
   }
-  .list-group > img {
+  .list-group > a img {
     min-height: 200px;
     height: 200px;
     width: 100%;
@@ -43,8 +55,8 @@
     text-decoration: none;
 }
 
-  .card-trip:hover a {
-     color: #ca4040;
+  .card-trip:onclick a {
+     color: #636363;
   }
 
   .card-trip p {
@@ -63,17 +75,36 @@
   }
 
   .row h1 {
-    font-family: "Work Sans", "Helvetica", "sans-serif";
+    font-family: "Clarkson", "Helvetica", "sans-serif";
     color: #242424;
     text-align: center;
   }
 
   .homepage-text {
     text-align: center;
-    padding-top: 10px;
+    padding-top: 30px;
   }
 
 .line_break {
   border-top: 1px solid #f1efef;
 }
 
+
+.confirmation-text {
+
+    padding-top: 30px;
+}
+
+.card-trip-infos > img {
+    min-height: 200px;
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+  }
+
+  .confirmation-card {
+    border-radius: 0 !important;
+  }
