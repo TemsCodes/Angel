@@ -10,10 +10,10 @@ export const displayAlertOnButtonClick = () => {
       alert('Calling you now');
     });
 
-    const buttonFinished = document.querySelector('#finish');
-    buttonFinished.addEventListener('click', (event) => {
-      alert('Amazing! 🎉 we hope you enjoyed your date.');
-    });
+    // const buttonFinished = document.querySelector('#finish');
+    // buttonFinished.addEventListener('click', (event) => {
+    //   alert('Amazing! 🎉 we hope you enjoyed your date.');
+    // });
   };
 
 
