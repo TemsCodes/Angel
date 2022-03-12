@@ -11,7 +11,13 @@
   <%= f.submit "Call me", id:"callme" %>
   <% end %>
 
-  <div>
-    <button class="uk-button uk-button-default uk-button-large" id="finish" href="#">Date is finished</button>
+  <%# <div id="finish">
+    <%# <button class="uk-button uk-button-default uk-button-large" id="finish" href="#">Date is finished</button> %>
+    <%# <%= link_to "", "/places", class: "button" %>
+    <%# <%= link_to "Date is finished", places_path, class:"uk-button uk-button-default uk-button-large" %>
+<%# </div> %>
+<div id="finish">
+<%= link_to places_path do %>
+  <p class="uk-button uk-button-default uk-button-large">Date is finished</p>
+<% end %>
 </div>
-

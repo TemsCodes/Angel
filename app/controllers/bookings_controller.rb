@@ -11,7 +11,7 @@ class BookingsController < ApplicationController
     @booking.place = place
     @booking.user = current_user
     if @booking.save
-      redirect_to profile_path
+      redirect_to booking_path(@booking.id)
     else
       render :show
     end
@@ -27,6 +27,7 @@ class BookingsController < ApplicationController
   end
 
   def show
+    @booking = Booking.find(params[:id])
   end
 
   private

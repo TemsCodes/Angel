@@ -6,7 +6,7 @@
   top: 0px;
   width: 100vw;
   z-index: 2;
-  box-shadow: 0 4px 2px -2px rgba(0,0,0,.2);
+  box-shadow: 0 4px 2px -2px rgba(83, 83, 83, 0.2);
 
 }
 
@@ -19,14 +19,21 @@
   flex-grow: 0;
 }
 
+.send-call-button {
+  vertical-align: middle;
+  border-style: none;
+  opacity: 50;
+}
+
 .navbar-lewagon .navbar-brand img {
   width: 50px;
   margin-left: 8px;
 }
 
 .navbar-icons > img {
-  height: 37px;
-  width: 37px;
-  margin-right: 8px;
+  height: 35px;
+  width: 35px;
+  margin-top: 5px;
+  margin-right: 20px;
   opacity: 50;
 }

@@ -14,16 +14,37 @@
   <%# <div class="collapse navbar-collapse" id="navbarSupportedContent"> %>
   <ul class="navbar-nav" style="flex-direction: row;">
     <% if user_signed_in? %>
-      <li class="nav-item active">
+      <%# <li class="nav-item active">
         <%= link_to "/places", class: "navbar-icons" do %>
-          <%= image_tag "https://pic.onlinewebfonts.com/svg/img_382824.png" %>
+
+          <%# <%= image_tag "https://pic.onlinewebfonts.com/svg/img_382824.png" %> 
+        <%= form_with url:send_message_path do |f| %>
+           <%= button_tag type: 'submit', class: "navbar-icons" do %>
+           <%= image_tag "https://pic.onlinewebfonts.com/svg/img_382824.png" %>
+          <% end %>
+          <% end %>
+      </li>
+      <li class="nav-item">
+        <%# <%= link_to "/places", class: "navbar-icons" do %>
+     
+        <%= form_with url:send_call_path do |f| %>
+          <%= button_tag type: 'submit', class: "navbar-icons" do %>
+            <%= image_tag "https://img.icons8.com/ios-filled/344/phone.png", class:"phone-icon" %>
+          <% end %>
+        <% end %>
+          <%# <a href="tel:07385024877" class="navbar-icons">
+            <%= image_tag "https://img.icons8.com/ios-filled/344/phone.png" %>
+          <%# </a> %>
+
+          <%= image_tag "textvs.png" %>
         <% end %>
       </li>
       <li class="nav-item">
         <%# <%= link_to "/places", class: "navbar-icons" do %>
           <a href="tel:07385024877" class="navbar-icons">
-            <%= image_tag "https://img.icons8.com/ios-filled/344/phone.png" %>
+            <%= image_tag "phonevs.png" %>
           </a>
+
           <%# <% end %>
         </li>
         <li class="nav-item dropdown">
