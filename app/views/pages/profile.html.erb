@@ -6,6 +6,9 @@
           <div class="card-trip">
             <div class="card-trip-infos">
               <div class="w-100">
+                <div class="d-flex justify-content-center align-item-center">
+                  <img class="avatar_2" src="https://media-exp1.licdn.com/dms/image/C4D03AQEeDt__IceKgA/profile-displayphoto-shrink_200_200/0/1610963974924?e=1652313600&v=beta&t=M2QWluqtb8S_jPqDFB4WFEhqQsljU5GWnEzD6mQ5hZc">
+                </div>
                 <h4><b>Your name:</b> Renee Godyn</h4>
                 <h4><b>Your phone number:</b> +447385371662</h4>
                 <h4><b>Your e-mail address:</b> renee.godyn@gmail.com</h4>
@@ -22,23 +25,22 @@
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <% @bookings.each_with_index do |booking, index|%>
-          <% unless index == 0 %>
-          <div class="w-100 line_break"></div>
-          <% end %>
           <div class="card-trip">
-              <%# <img src="https://www.tate.org.uk/sites/default/files/styles/width-720/public/images/people-on-the-millennium-br_0.jpg"> %>
+            <% @bookings.each_with_index do |booking, index|%>
+              <% unless index == 0 %>
+              <div class="w-100 line_break"></div>
+              <% end %>
               <div class="card-trip-infos">
                 <div>
-                <h4>You booked an angel for your date at <%= booking.place.name %></h4>
+                  <h4>You booked an angel for your date at <%= booking.place.name %></h4>
                   <h5>Booked for <%= booking.date %></h5>
                 </div>
-                  <%= link_to "Summary", "/bookings/#{booking.id}", class: "myButton" %>
-                  <%= link_to "Check-in", "/checkin", class: "myButton-primary" %>
-            </div>
-            <% end %>
+                <%= link_to "Summary", "/bookings/#{booking.id}", class: "myButton" %>
+                <%= link_to "Check-in", "/checkin", class: "myButton-primary" %>
+              </div>
+           <% end %>
           </div>
         </div>
       </div>
     </div>
-   </div>
+</div>
