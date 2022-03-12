@@ -1,0 +1,24 @@
+.shop-profile-header {
+    overflow: hidden;
+}
+
+.shop-profile-header--hero {
+    background-size: cover;
+    background-position: 50%;
+}
+
+.shop-profile-header--hero:before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    display: block;
+    background-image: linear-gradient(180deg,transparent,rgba(0,0,0,.313725));
+    z-index: 0;
+}
+
+element.style {
+    background-image: url("file:///Users/taniapapamikrou/code/TaniaPapamikrou/angel/app/assets/stylesheets/pages/images/photo.png");
+}
