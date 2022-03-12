@@ -1,16 +1,16 @@
 <div class = "container, border">
- <h1>this is the confirmation page</h1>
+  <div class="confirmation-text">
+    <h1>Your Angel is confirmed</h1>
+    <p>You will be taken care of at</p>
+  </div>
+   <div class="card-trip-infos">
 
-  <h2>We’ll take care of you at:</h2>
-  <%# <h2>Place Name: <%=link_to place.name, place_path(place)%></h2> %>
-  <h2>Place Location</h2>
-  <h2>Booking Date</h2>
-  <h2>Booking Time</h2>
-  <h2>You selected question: xxxxxx</h2>
-   <h3>Answer A: Green - we know you are in danger</h3>
-   <h3>Answer B: Yellow - everything is okay</h3>
-
-  <h2>Location Map</h2>
-  <h2>Homepage Button</h2>
+                <%= cl_image_tag @booking.place.photo.key, crop: :fill %>
+                <h4> <%= @booking.place.name %></h4>
+                  <h5>Booked for <%= @booking.date %></h5>
+                  <h5>Told us you'd be wearing <%= @booking.details %></h5>
+                </div>
+                  <%= link_to "Back", "/profile/", class: "myButton" %>
+            </div>
 
 </div>

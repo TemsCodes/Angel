@@ -2,7 +2,7 @@
 <div class= "homepage_wrapper">
   <div class="homepage-text">
     <%# <h1>PICK A DATE</h1> %>
-    <h1>Welcome Renée!</h1>
+    <h1>Welcome Renée</h1>
     <p>Book your Angel today</p>
       <div class="front-page">
         <%# <%= video_tag "#insertvideo", class: "home_video" %>
@@ -35,7 +35,7 @@
         <ul class="list-group">
           <% @places.each do |place| %>
               <% if place.photo.attached? %>
-                <%= cl_image_tag place.photo.key, crop: :fill %>
+               <a href="places/<%= place.id%>"> <%= cl_image_tag place.photo.key, crop: :fill %> </a>
                 <% else %>
                 <img src="https://res.cloudinary.com/dfljjticx/image/upload/v1644669676/pizzaeast_j438iw.jpg" style="height: 100%; width: 100%;"  >
               <% end %>
