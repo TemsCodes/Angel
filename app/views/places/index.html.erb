@@ -17,11 +17,13 @@
 
       <div class="container">
         <div class="card-trip">
-          <div class="card-trip-infos">
+          <div class="card-trip-infos-2">
             <% if @booking %>
-              <p> You have an upcoming Angel booking at <%= @booking.place.name %> </p>
-              <%= @booking.date %>
-              <a class="myButton-primary" id="Check-in" href="/checkin">Check in</a>
+              <h4> You have an upcoming Angel booking at <b><%= @booking.place.name %>.</b> </h4>
+              <div class="d-flex justify-content-between">
+              <h4 class="mt-2"><%= @booking.date %></h4>
+              <button class="button-checkin-2" id="Check-in" href="/checkin"><b>Check in</b></button>
+              </div>
             <% end %>
           </div>
         </div>
