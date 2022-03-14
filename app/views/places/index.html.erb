@@ -14,22 +14,21 @@
       <%# <%= video_tag "#insertvideo", class: "home_video" %>
     </div>
     <div class="container">
-
       <div class="container">
         <div class="card-trip">
-          <div class="card-trip-infos-2">
             <% if @booking %>
+             <div class="card-trip-infos-2">
               <h4> You have an upcoming Angel booking at <b><%= @booking.place.name %>.</b> </h4>
               <div class="d-flex justify-content-between">
               <h4 class="mt-2"><%= @booking.date %></h4>
               <button class="button-checkin-2" id="Check-in" href="/checkin"><b>Check in</b></button>
               </div>
+              </div>
             <% end %>
-          </div>
         </div>
+        <h3 class="text-center" id= "para1" >Find your Angel</h3>
         <div class="row">
         <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-          <h1>All dating places</h1>
         </div>
       </div>
         <div class="card-trip">
@@ -37,12 +36,20 @@
         <ul class="list-group">
           <% @places.each do |place| %>
               <% if place.photo.attached? %>
-               <a href="places/<%= place.id%>"> <%= cl_image_tag place.photo.key, crop: :fill %> </a>
-                <% else %>
-                <img src="https://res.cloudinary.com/dfljjticx/image/upload/v1644669676/pizzaeast_j438iw.jpg" style="height: 100%; width: 100%;"  >
+               <%= link_to place_path(place) do %>
+                <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path place.photo.key, crop: :fill %>)">
+                 <%= place.name %>
+               </div>
               <% end %>
-              <p> </p>
-              <h2><%= link_to place.name, place_path(place) %></h2>
+                <% else %>
+                <%# <img src="https://res.cloudinary.com/dfljjticx/image/upload/v1644669676/pizzaeast_j438iw.jpg" style="height: 100%; width: 100%;"  > %>
+              <%# <p> </p> %>
+              <%= link_to place_path(place) do %>
+               <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://res.cloudinary.com/dfljjticx/image/upload/v1644669676/pizzaeast_j438iw.jpg')">
+                <%= place.name %>
+               </div>
+              <% end %>
+              <% end %>
               <p class="mb-4"><%= place.description %></p>
 
             <%# <h2 class="card-trip-pricing">Top ranking</h2> %>

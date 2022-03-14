@@ -1,67 +1,39 @@
-<body>
-<div class="container">
-  <div class="title">
-   <h2 class="text-center"><%= @place.name %></h2>
-   <h3 class="text-center"><%= @place.address %></>
-      <p><%#= @place.website %> </p>
-      <p> <%#= @place.phone_number %> </p>
-  </div>
-
-  <div>
-      <%= cl_image_tag @place.photo.key, id: "image", height: 180, width: 360, crop: :fill %>
-  </div>
-
- <div>
-  <div class="row">
-   <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+ <div class="container">
+   <div class="title">
+    <h2 class="text-center"><%= @place.name %></h2>
+    <h3 class="text-center"><%= @place.address %></>
+    <p><%#= @place.website %> </p>
+    <p> <%#= @place.phone_number %> </p>
    </div>
-  </div>
- <div id="map" class = "map-box"
+
+   <div>
+      <%= cl_image_tag @place.photo.key, id: "image", height: 180, width: 360, crop: :fill %>
+   </div>
+
+   <%# <div>
+    <div class="row">
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+   </div> %>
+
+   <div id="map" class = "map-box"
      style="width: 100%; height: 400px;"
      data-markers="<%= @markers.to_json %>"
      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-  </div>
+   </div>
 
-  <div class="place-info">
+   <div class="place-info">
     <p id="place-description"><%= @place.description%></p>
-  </div>
+   </div>
 
- <div class="col-5">
-  <div class="booking-form">
-    <h3 class="text-center">Book your Angel</h3>
+   <%# <div class="col-5"> %>
+    <div class="booking-form">
+     <h3 class="text-center">Book your Angel</h3>
       <%= simple_form_for([ @place, @booking ]) do |f| %>
         <%= f.input :date, as: :datetime, html5: true %>
         <%= f.input :identification %>
-        <%= f.input :details %>
+        <%= f.input :details, label: "How can we identify you?" %>
         <%= f.submit "Book", class: "btn-search btn-search-index btn-island-new" %>
       <% end %>
-  </div>
- </div>
-        <%= f.input :details, label: "How can we identify you?" %>
-        <%= f.button :submit %>
-        <% end %>
-       <%# <form class = "simple_form new_booking" id="new_booking" novalidate="novalidate" action="places/1/bookings" accept-charset="UTF-8" method="post">
-          <input type="hidden" name="authenticity_token" value="mSiWdmcYEm/SA1QmjSexwT8HCxS+23pFtItdqoufdjh1WM555Eu/RjaFrA5j5NoZz/latc1LEmjX/u488pDSKA==">
-          <div class="form-group date required booking_date">
-            <label class="date required" for="booking_date">
-               Date
-            </label>
-            <div class="d-flex flex-row justify-content-between align-items-center">
-              <input class="form-control mx-1 date required" type="date" name="booking[date]" id="booking_date">
-            </div>
-          </div>
-          <div class="form-group integer required booking_number_of_people">
-            <label class="integer required" for="booking_number_of_people">
-              Number of people
-            </label>
-            <input class="form-control numeric integer required inline-element" type="number" step="1" name="booking[number_of_people]" id="booking_number_of_people">
-          </div>
-
-          <%# <input type="submit" name="commit" value="Book" class="btn-search btn-search-index btn-island-new" data-disable-with="Book"> %>
-       </form>
-
-      </div>
     </div>
-  </div>
+  <%# </div> %>
  </div>
-</body>

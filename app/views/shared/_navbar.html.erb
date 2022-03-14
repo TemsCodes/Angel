@@ -1,65 +1,76 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <%= link_to "/places", class: "navbar-brand" do %>
+  <script src="https://cdn.lordicon.com/lusqsztk.js"></script>
+  <lord-icon
+      src="https://cdn.lordicon.com/hpxruznz.json"
+      trigger="loop"
+      colors="primary:#c69cf4,secondary:#08a88a"
+      style="width:40px; height:40px">
+  </lord-icon>
+  <% end %>
+
+  <ul class="navbar-nav" style="flex-direction: row;">
+    <% if user_signed_in? %>
+
+      <%# MESSAGE BUTTON REDIRECT TO SEND_MESSAGE %>
+      <li class="nav-item active">
+        <%= form_with url:send_message_path do |f| %>
+           <%= button_tag type: 'submit', class: "navbar-icons" do %>
+           <%= image_tag "textvs.png" %>
+          <% end %>
+        <% end %>
+      </li>
+
+      <%# PHONE BUTTON REDIRECT TO SEND_CALL %>
+      <li class="nav-item">
+        <%= form_with url:send_call_path do |f| %>
+          <%= button_tag type: 'submit', class: "navbar-icons" do %>
+            <%= image_tag "phonevs.png", class:"phone-icon" %>
+          <% end %>
+        <% end %>
+      </li>
+
+
+      <li class="nav-item dropdown">
+        <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://media-exp1.licdn.com/dms/image/C4D03AQEeDt__IceKgA/profile-displayphoto-shrink_800_800/0/1610963974924?e=1649894400&v=beta&t=ce2kruwF7C1QNxjI9i9yp5lyLyXgXVyjuo8X_R8igZA" />
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"  style="position: absolute;">
+          <a class="dropdown-item" href="/profile">Profile</a>
+          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+        </div>
+      </li>
+
+    <% else %>
+
+      <li class="nav-item">
+        <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+      </li>
+
+    <% end %>
+  </ul>
+</div>
+<div class="include_nav_height"> </div>
+
+
 <script src="https://cdn.lordicon.com/lusqsztk.js"></script>
 <lord-icon
-    src="https://cdn.lordicon.com/hpxruznz.json"
+    src="https://cdn.lordicon.com/cnbtojmk.json"
     trigger="loop"
     colors="primary:#c69cf4,secondary:#08a88a"
     style="width:40px; height:40px">
 </lord-icon>
-<% end %>
-  <%# <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button> %>
-  <%# <div class="collapse navbar-collapse" id="navbarSupportedContent"> %>
-  <ul class="navbar-nav" style="flex-direction: row;">
-    <% if user_signed_in? %>
-      <%# <li class="nav-item active">
-        <%= link_to "/places", class: "navbar-icons" do %>
 
-          <%# <%= image_tag "https://pic.onlinewebfonts.com/svg/img_382824.png" %>
-        <%= form_with url:send_message_path do |f| %>
-           <%= button_tag type: 'submit', class: "navbar-icons" do %>
-           <%= image_tag "https://pic.onlinewebfonts.com/svg/img_382824.png" %>
-          <% end %>
-          <% end %>
-      </li>
-      <li class="nav-item">
-        <%# <%= link_to "/places", class: "navbar-icons" do %>
+<script src="https://cdn.lordicon.com/lusqsztk.js"></script>
+<lord-icon
+    src="https://cdn.lordicon.com/rhvddzym.json"
+    trigger="loop"
+    colors="primary:#c69cf4,secondary:#08a88a"
+    style="width:40px; height:40px">
+    </lord-icon>
 
-        <%= form_with url:send_call_path do |f| %>
-          <%= button_tag type: 'submit', class: "navbar-icons" do %>
-            <%= image_tag "https://img.icons8.com/ios-filled/344/phone.png", class:"phone-icon" %>
-          <% end %>
-        <% end %>
-          <%# <a href="tel:07385024877" class="navbar-icons">
-            <%= image_tag "https://img.icons8.com/ios-filled/344/phone.png" %>
-          <%# </a> %>
 
-          <%= image_tag "textvs.png" %>
-        <% end %>
-      </li>
-      <li class="nav-item">
-        <%# <%= link_to "/places", class: "navbar-icons" do %>
-          <a href="tel:07385024877" class="navbar-icons">
-            <%= image_tag "phonevs.png" %>
-          </a>
-
-          <%# <% end %>
-        </li>
-        <li class="nav-item dropdown">
-          <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://media-exp1.licdn.com/dms/image/C4D03AQEeDt__IceKgA/profile-displayphoto-shrink_800_800/0/1610963974924?e=1649894400&v=beta&t=ce2kruwF7C1QNxjI9i9yp5lyLyXgXVyjuo8X_R8igZA" />
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"  style="position: absolute;">
-            <a class="dropdown-item" href="/profile">Profile</a>
-            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-          </div>
-        </li>
-      <% else %>
-        <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-        </li>
-      <% end %>
-    </ul>
-    <%# </div> %>
-  </div>
-  <div class="include_nav_height"> </div>
+<%# LIGHT GREY PHONE ICON -- TOGGLES CALL%>
+<%# <li class="nav-item"> %>
+  <%# <a href="tel:07385024877" class="navbar-icons"> %>
+    <%#= image_tag "phonevs.png" %>
+  <%# </a> %>
+<%# </li> %>
