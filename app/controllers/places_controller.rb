@@ -6,22 +6,14 @@ class PlacesController < ApplicationController
     @places = Place.all
   end
 
-  # def new
-  #   @place = Place.new
-  # end
-
   def create
     @place = Place.new(place_params)
     if @place.save
-      redirect_to places_path
+      redirect_to place_path(@place)
     else
       render :new
     end
   end
-
-  # def show
-  #   @booking = Booking.new
-  # end
 
   def show
     @booking = Booking.new
@@ -56,4 +48,8 @@ end
   # def destroy
   #   @place.destroy
   #   redirect_to places_path
+  # end
+
+  # def new
+  #   @place = Place.new
   # end
