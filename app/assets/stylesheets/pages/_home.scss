@@ -1,4 +1,7 @@
 // Specific CSS for your home-page
+body {
+  background-color:#F8F9FA !important;
+}
 .homepage_wrapper {
 
   display: flex;
@@ -6,7 +9,7 @@
   align-items: center;
   width: 100%;
 
-  background: #ffffffc2;
+  // background: #ffffffc2;
 }
 
 .homepage-text {
@@ -33,4 +36,5 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin-top: 34px;
 }

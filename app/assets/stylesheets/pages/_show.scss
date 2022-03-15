@@ -14,7 +14,8 @@ body {
 }
 
 .title h2 {
-  width: 700px;
+  // width: 700px;
+  margin-top: 16px;
   margin-bottom: 16px;
   padding-bottom: 26px;
   border-bottom: 4px solid #E7E7EA;
@@ -22,11 +23,12 @@ body {
 
 .title h3 {
   margin-top: 8px;
+  font-size: 14px;
 }
 
 h2, h3, p {
 font-family: 'Montserrat', sans-serif;
-letter-spacing: 9px;
+letter-spacing: 8px;
 font-weight: 300;
 }
 
@@ -68,7 +70,7 @@ p {
   text-align: center;
   margin-bottom: 1px;
   margin-top: 1px;
-  box-shadow: 0 0px 55px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0px 20px rgba(0, 0, 0, 0.2);
   // border-radius: 5px;
   min-height: 48px;
   line-height: 31px;
@@ -87,10 +89,10 @@ p {
   padding: 40px 16px;
   text-align: center;
   margin-bottom: 10px;
-  margin-top: 10px;
-  box-shadow: 0 0px 55px rgba(0, 0, 0, 0.2);
-  // border-radius: 5px;
-  height: 550px;
+  margin-top: 20px;
+  box-shadow: 0 0px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  // height: 550px;
 }
 
 .booking-form h3 {

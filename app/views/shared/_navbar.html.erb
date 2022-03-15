@@ -5,7 +5,7 @@
       src="https://cdn.lordicon.com/hpxruznz.json"
       trigger="loop"
       colors="primary:#c69cf4,secondary:#08a88a"
-      style="width:40px; height:40px">
+      style="width:65px; height:65px; margin-bottom:6px">
   </lord-icon>
   <% end %>
 
@@ -16,7 +16,7 @@
       <li class="nav-item active">
         <%= form_with url:send_message_path do |f| %>
            <%= button_tag type: 'submit', class: "navbar-icons" do %>
-           <%= image_tag "textvs.png" %>
+           <%= image_tag "message.png", class:"message-icon" %>
           <% end %>
         <% end %>
       </li>
@@ -25,7 +25,7 @@
       <li class="nav-item">
         <%= form_with url:send_call_path do |f| %>
           <%= button_tag type: 'submit', class: "navbar-icons" do %>
-            <%= image_tag "phonevs.png", class:"phone-icon" %>
+            <%= image_tag "call.png", class:"phone-icon" %>
           <% end %>
         <% end %>
       </li>
@@ -51,7 +51,7 @@
 <div class="include_nav_height"> </div>
 
 
-<script src="https://cdn.lordicon.com/lusqsztk.js"></script>
+<%# <script src="https://cdn.lordicon.com/lusqsztk.js"></script>
 <lord-icon
     src="https://cdn.lordicon.com/cnbtojmk.json"
     trigger="loop"
@@ -65,7 +65,7 @@
     trigger="loop"
     colors="primary:#c69cf4,secondary:#08a88a"
     style="width:40px; height:40px">
-    </lord-icon>
+    </lord-icon> %>
 
 
 <%# LIGHT GREY PHONE ICON -- TOGGLES CALL%>

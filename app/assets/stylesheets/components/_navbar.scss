@@ -30,10 +30,20 @@
   margin-left: 8px;
 }
 
-.navbar-icons > img {
-  height: 35px;
-  width: 35px;
-  margin-top: 5px;
-  margin-right: 20px;
-  opacity: 50;
+.navbar-icons {
+
+  border: none;
+  background: transparent;
+  .phone-icon {
+  height: 40px;
+  // width: 35px;
+  // margin-top: 5px;
+  margin-right: 10px;
+  // opacity: 50;
+  }
+  .message-icon {
+    height: 25px;
+    margin-top: 9px;
+    margin-right: 8px;
+  }
 }
