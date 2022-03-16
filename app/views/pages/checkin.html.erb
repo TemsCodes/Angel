@@ -1,14 +1,14 @@
 <div class= "homepage_wrapper">
   <div class="homepage-text">
-<h1>You're checked in!</h1>
+<h1>You have been checked in!</h1>
 </div>
 
 <%= form_with url:send_message_path do |f| %>
-  <%= f.submit "Check me!", id:"checkin" %>
+  <%= f.submit "Check on me!", id:"checkme-pulse-button" %>
   <% end %>
 
   <%= form_with url:send_call_path do |f| %>
-  <%= f.submit "Call me", id:"callme" %>
+  <%= f.submit "Call me!", id:"callme-pulse-button" %>
   <% end %>
 
   <%# <div id="finish">
