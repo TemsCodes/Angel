@@ -12,7 +12,7 @@
     .card-trip .card-trip-infos-2 {
     padding: 16px;
     // display: flex;
-    background: rgb(244, 227, 247);
+    background: #fcebff;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 16px;
     padding: 16px;
@@ -21,6 +21,12 @@
     position: relative;
     border-radius: 20px;
   }
+
+    .card-trip .card-trip-infos-2 h4 {
+    font-family: 'Montserrat', sans-serif;
+    color: #4b4949;
+    }
+
   .card-trip-infos .card-trip-user {
     position: absolute;
     right: 16px;
@@ -76,14 +82,20 @@
   }
 
   .row h1 {
-    font-family: "Clarkson", "Helvetica", "sans-serif";
-    color: #242424;
+    font-family: 'Montserrat', sans-serif;
+    color: #4b4949;
     text-align: center;
   }
 
-  .homepage-text {
+  .homepage-text h1{
+    font-family: 'Montserrat', sans-serif;
     text-align: center;
     padding-top: 30px;
+    color: #4b4949;
+  }
+
+  .homepage-text p{
+    color: #4b4949;
   }
 
 .line_break {
@@ -117,7 +129,7 @@
 .confirmation-text h1{
     padding-top: 35px;
     padding-bottom: 35px;
-    font-family: "Nunito", "Helvetica", "sans-serif";
+    font-family: 'Montserrat', sans-serif;
     color: #4b4949;
     font-size: 40px;
     text-align: center;
@@ -126,7 +138,7 @@
 .confirmation-text h2{
     padding-top: 10px;
     padding-bottom: 20px;
-    font-family: "Nunito", "Helvetica", "sans-serif";
+    font-family: 'Montserrat', sans-serif;
     color: #4b4949;
     font-size: 30px;
     text-align: center;
@@ -136,7 +148,7 @@
 .confirmation-text h5{
     padding-left: 30px;
     padding-right: 30px;
-    font-family: "Nunito", "Helvetica", "sans-serif";
+    font-family: 'Montserrat', sans-serif;
     text-align: center;
     color: #807c7c;
     font-style: italic;
