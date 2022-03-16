@@ -14,6 +14,13 @@ const initMapbox = () => {
       container: 'map',
       style: 'mapbox://styles/mapbox/streets-v10'
     });
+    if (mapElement.dataset.marker) {
+      const marker = JSON.parse(mapElement.dataset.marker);
+      new mapboxgl.Marker()
+        .setLngLat([marker.lng, marker.lat])
+        .addTo(map);
+      fitMapToMarker(map, marker);
+    };
     map.once('load', function () {
       map.resize()
     })
