@@ -29,8 +29,8 @@
     transition: opacity 0.3s ease;
     text-align: center;
 }
-.button-checkin-2 {
-    color: white;
+.button-checkin-2 a {
+    color: white !important;
     background: #380650;
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
@@ -42,12 +42,14 @@
     transition: opacity 0.3s ease;
     text-align: center;
 }
+
 .button-checkin-2:hover {
      background: #e5e2e5e5;
      color: rgb(0, 0, 0);
      text-decoration: wavy;
      text-align: center;
 }
+
 .button-checkin:hover {
      background: #e5e2e5e5;
      color: rgb(0, 0, 0);
