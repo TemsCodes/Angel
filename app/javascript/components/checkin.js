@@ -17,9 +17,10 @@ export const displayAlertOnButtonClick = () => {
     }
 
     const buttonFinished = document.querySelector('#finish');
+    const jsConfetti = new JSConfetti()
+
     buttonFinished.addEventListener('click', (event) => {
     //  alert('Amazing! 🎉 we hope you enjoyed your date.');
-      const jsConfetti = new JSConfetti()
       jsConfetti.addConfetti()
 
     });
