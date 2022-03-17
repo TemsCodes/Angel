@@ -14,6 +14,24 @@
   height: 76px;
 }
 
+.button-checkin-2  {
+    color: white !important;
+    background: #380650;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    border: 1px solid #380650;
+    padding: 4px 4px;
+    border-radius: 12px;
+    font-weight: lighter;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.button-checkin-2:hover {
+  background: #e5e2e5e5;
+  color: rgb(0, 0, 0) !important;
+  text-decoration: wavy;
+}
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
